@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "Gatherly SOA APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {"name":"Health - User","request":{"method":"GET","url":"http://127.0.0.1:5001/health"}},
+    {"name":"List Events","request":{"method":"GET","url":"http://127.0.0.1:5002/events"}},
+    {"name":"Create User","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"name\":\"Sample Student\",\"email\":\"student@example.com\",\"student_id\":\"STU001\",\"password\":\"change-this-password\"}"},"url":"http://127.0.0.1:5001/users"}},
+    {"name":"List Registrations","request":{"method":"GET","url":"http://127.0.0.1:5003/registrations"}},
+    {"name":"List Tickets","request":{"method":"GET","url":"http://127.0.0.1:5004/tickets"}},
+    {"name":"List Notifications","request":{"method":"GET","url":"http://127.0.0.1:5005/notifications"}}
+  ]
+}

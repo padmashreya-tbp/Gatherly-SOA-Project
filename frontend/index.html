@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gatherly | Event Registration</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">Gatherly<span>.</span></div><nav><a href="#events">Events</a><a href="#register">Register</a><a href="#tickets">Tickets</a><a href="#notifications">Notifications</a></nav></header>
+<section class="hero"><div class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</div><h1>Find your next<br><span>great experience.</span></h1><p>Discover campus events, reserve your seat, and keep every ticket in one place.</p><a class="primary" href="#events">Explore events ↓</a><div class="hero-note">A Service-Oriented Architecture demonstration</div></section>
+<main>
+<section id="events"><div class="section-head"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2></div><button onclick="loadEvents()">Refresh events ↻</button></div><div id="event-list" class="cards"><p class="muted">Loading events…</p></div></section>
+<section id="register" class="panel"><p class="eyebrow">SAVE YOUR SEAT</p><h2>Register for an event</h2><p class="muted">Create an account first, then use your user ID to register.</p>
+<div class="form-grid"><form id="user-form"><h3>1. Create account</h3><label>Full name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label>Student ID<input name="student_id" required></label><label>Password<input name="password" type="password" minlength="6" required></label><button class="primary" type="submit">Create account</button></form>
+<form id="registration-form"><h3>2. Book your seat</h3><label>Your user ID<input name="user_id" type="number" min="1" required></label><label>Event<select name="event_id" id="event-select" required><option value="">Choose an event</option></select></label><button class="primary" type="submit">Register & get ticket</button></form></div><div id="message" role="status"></div></section>
+<section id="tickets"><div class="section-head"><div><p class="eyebrow">YOUR PASS</p><h2>Ticket lookup</h2></div></div><form id="ticket-form" class="inline-form"><input name="ticket_id" placeholder="Enter ticket code, e.g. GT-ABC123" required><button class="primary">Find ticket</button></form><div id="ticket-result"></div></section>
+<section id="notifications"><div class="section-head"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Notifications</h2></div></div><form id="notification-form" class="inline-form"><input name="user_id" type="number" min="1" placeholder="Enter your user ID" required><button>Load notifications</button></form><div id="notification-list"></div></section>
+</main><footer><strong>Gatherly</strong><span>Event Registration & Ticket Management · SOA Project</span></footer>
+<script src="app.js"></script></body></html>
